@@ -1,24 +1,70 @@
 ---
 import ProjectItem from "./ProjectItem.astro"
 
+
 const PROJECTS = [
   {
     title: 'Trip Track APK - Trip Tracker APP',
-    tecnologies: ['IntelliJ IDEA', 'Java'],
+    tecnologies: [
+          {
+            name: 'IntelliJ IDEA',
+            icon: 'public/intellijidea.svg'
+          },
+          {
+           name: 'Java',
+           icon: 'public/java.svg'
+          },
+          {
+            name: 'Firebase',
+            icon: 'public/firebase.svg'
+          }
+        ], 
     description: 'Aplicación Android desarrollada en Java que le permitirá planificar, organizar y disfrutar de tus viajes de una forma fácil y divertida. Con esta aplicación podrás: • Controlar los gastos de tu viaje. • Apuntar los planes en un calendario. • Guardar fotos e imágenes en galerías. • Importar documentos importantes como pdfs de reserva. • Marcar los viajes que has terminado y ver tu nivel y experiencia.',
+    imgPath: 'public/triptrackedit.jpg',
+    status: 'Finalizado'
+  },
+  {
+    title: 'Sea & Port',
+    tecnologies: [
+      {
+      name: 'Vue.js',
+      icon: 'public/vue.svg'
+    },
+    {
+      name: 'JavaScript',
+      icon: 'public/javascript.svg'
+    },
+    {
+      name: 'Laravel',
+      icon: 'public/laravel.svg'
+    },
+    {
+      name: 'PHP',
+      icon: 'public/Php_dark.svg'
+    },
+    {
+      name: 'MySQL',
+      icon: 'public/mysql.svg'
+    },
+    
+  ],
+    description: 'Aplicación web desarrollada en Vue.js que le permitirá a los usuarios buscar y reservar viajes en barco. Con esta aplicación podrás: • Buscar viajes en barco. • Reservar viajes en barco. • Ver información sobre los viajes. • Ver información sobre los barcos. • Ver información sobre los puertos. • Ver información sobre los destinos.',
+    imgPath: 'public/seaandportsedit.jpg',
+    status: 'En Curso'
   }
+
 ]
 ---
 
-
-<ol class="ml-3.5 relative border-s border-gray-200 dark:border-gray-700">  
+<div class="grid md:grid-cols-4 gap-4 mt-6">  
     {
         PROJECTS.map(project => (
-            <li class="mb-10 ms-4">
+            <a class="relative bg-gray-900 shadow dark:shadow-primary-50/10 dark:bg-dark-900 w-full rounded-3xl min-h-[340px] md:col-span-2 p-1 group overflow-hidden cursor-pointer">
                 <ProjectItem {...project} />
-            </li>   
+            </a>   
         ))
     }         
-</ol>
+</div>
+
 
 
