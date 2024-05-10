@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    title: 'Desarrollador Web Full Stack',
+    company: 'Aratech Lifestyle Technology S.L.',
+    date: 'Actualmente...',
+    description: 'Desarrollo de aplicaciones web y móviles, diseño de interfaces de usuario, maquetación y programación de sitios web, mantenimiento de aplicaciones web y móviles, etc.',
+    link: 'https://aratech.es'
+  },
+  {
+    title: 'Técnico en sala de realidad virtual',
+    company: 'Virtual Zone S.L.',
+    date: 'Actualmente...',
+    description: 'Atención al cliente, mantenimiento de equipos, resolución de incidencias, etc.'
+  },
+]
+---
+
+<ol class="ml-3.5 relative border-s border-gray-200 dark:border-gray-700">  
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>   
+        ))
+    }         
+</ol>
+
+

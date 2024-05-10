@@ -1,0 +1,24 @@
+---
+import ProjectItem from "./ProjectItem.astro"
+
+const PROJECTS = [
+  {
+    title: 'Trip Track APK - Trip Tracker APP',
+    tecnologies: ['IntelliJ IDEA', 'Java'],
+    description: 'Aplicación Android desarrollada en Java que le permitirá planificar, organizar y disfrutar de tus viajes de una forma fácil y divertida. Con esta aplicación podrás: • Controlar los gastos de tu viaje. • Apuntar los planes en un calendario. • Guardar fotos e imágenes en galerías. • Importar documentos importantes como pdfs de reserva. • Marcar los viajes que has terminado y ver tu nivel y experiencia.',
+  }
+]
+---
+
+
+<ol class="ml-3.5 relative border-s border-gray-200 dark:border-gray-700">  
+    {
+        PROJECTS.map(project => (
+            <li class="mb-10 ms-4">
+                <ProjectItem {...project} />
+            </li>   
+        ))
+    }         
+</ol>
+
+
